@@ -1,0 +1,38 @@
+#employee_login_page{
+	 position:absolute;
+     width:300px;
+     height:200px;
+     z-index:15;
+     top:50%;
+     left:50%;
+     margin:-100px 0 0 -150px;
+     background:gray;
+     border: 1;
+}
+#employee_login_page2{
+	text-align: center;
+}
+#label_welcome{
+	font-size: 35px;
+	margin: 5px;
+	margin-bottom: 15px;
+}
+.login_form_field{
+	border-radius: 10px;
+	margin: 5px;
+    padding: 2px; 
+    width: 200px;
+    height: 18px;
+    font-size: 14px;
+    position: relative;
+    left:50px;
+    top:20px;
+}
+#login_form_field{
+	width: 300px;
+	height: 25px;
+	border-radius: 4px;
+	font-size: 14px;
+	position: relative;
+	top:50px;
+}

@@ -1,0 +1,13 @@
+<%= link_to("All Employees", {:action => 'index'}, :class =>'back-link') %>
+<div class="employee new">
+<h1 id="enter_new_employee" > Enter New Employee </h1>
+<%=form_for @employee, url: {action: "create"}, html: {class: "employee_entry"} do |f| %>
+<%= f.text_field :first_name,  placeholder: 'First Name', :class => "employee_form_row" %>  <br> <br>
+<%= f.text_field :last_name, placeholder: 'Last Name', :class => "employee_form_row"%> <br> <br>
+<%= f.text_field :contact_number, placeholder: 'Contact Number', :class => "employee_form_row"%><br><br>
+<%= f.text_field :email_id, placeholder: 'Email Id', :class => "employee_form_row"%><br><br>
+<%= f.password_field :password, placeholder: 'Set Password' , :class => "employee_form_row"%><br><br>
+<%= f.password_field :password_confirmation, placeholder: 'Confirm Password', :class => "employee_form_row"%> <br><br>
+<%= f.submit "Add Employee", :id => "employee_form_button" %>
+<% end %>
+</div>

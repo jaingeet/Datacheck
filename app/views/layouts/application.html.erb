@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: #D3D3D3;
+}
+</style>
+  <title>Datacheck</title>
+  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag :application %>
+  <%= stylesheet_link_tag :application %>
+  </head>
+<body background-color: #808080>
+<HEADER id="first_header_id">
+<div class="first_header_div_class"> 
+<div  class="first_header_second_div_id" id="first_line"> Contact us for every type of service ! You just name the service </div>
+<div class="first_header_second_div_id" id="follow"> Follow us: <a href="https://www.linkedin.com/"> <%= image_tag("linkedin.png", :class =>'lin_fb') %></a> <a target="_parent" href="https://www.facebook.com"> <%= image_tag("fb.png", :class =>'lin_fb') %></a></div>
+</div>
+</HEADER>
+<HEADER >
+	<div class="second_header_class" >
+	<a href= "http://localhost:3000/login"><%= image_tag("logo.png", :id =>'logo_pic') %></a>
+	<div class="second_header_link_class">
+	</div>
+	<div>
+  <%= link_to "New Employee", new_employee_path, {:class => 'header_link'} %>
+  <%= link_to "New Request", new_request_path, {:class => 'header_link'} %>
+  <%= link_to "New Serviceman", new_serviceman_path, {:class => 'header_link'} %>
+</div>
+</HEADER>
+<%= yield %>
+</body>
+</html>

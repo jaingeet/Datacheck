@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<div class="serviceman show">
+<h2> Show Serviceman </h2>
+<table summary="Employee details view">
+<tr>
+<th> Serviceman  Id </th>
+<td> <%= @serviceman.id %> </td>
+</tr>
+<tr>
+<th> Serviceman Name </th>
+<td> <%= @serviceman.first_name +  " " + @serviceman.last_name %> </td>
+</tr>
+<tr>
+<th> Contact Number </th>
+<td> <%= @serviceman.contact_number %> </td>
+</tr>
+<tr>
+<th> Email Id </th>
+<td> <%= @serviceman.email_id %> </td>
+</tr>
+</table>
+</div>
+<%= link_to 'Go to Edit page', edit_serviceman_path(@serviceman) %> |
+<%= link_to 'Go to Index page', servicemen_path %>

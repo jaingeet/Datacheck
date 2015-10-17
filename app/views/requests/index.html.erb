@@ -1,0 +1,44 @@
+<div id="tfheader">
+    <form id="tfnewsearch" method="post" action="req/search">
+            <input type="text" class="tftextinput" name="q" size="21" maxlength="120">
+            <input type="submit" value="Search" class="tfbutton">
+    </form>
+  <div class="tfclear"></div>
+  </div>
+  <h1>Listing requests</h1>
+
+<table border = "1">
+  <thead>
+    <tr>
+      <th> Request Id</th>
+      <th> Customer Name</th>
+      <th> Contacr Number</th>
+      <th> Service Category</th>
+      <th>Request Address</th>
+      <th>Time Allocated</th>
+      <th> Assigned To</th>
+      <th> Show Link </th>
+      <th> Edit Link </th>
+      <th> Delete Link </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @requests.each do |request| %>
+      <tr>
+        <td><%= request.id %> </td>
+        <td><%= request.customer_name %> </td>
+        <td><%= request.contact_number %> </td>
+        <td><%= request.service_category %> </td>
+        <td><%= request.address %> </td>
+        <td><%= request.time_allocated %> </td>
+         <td><%= request.assigned_to %> </td>
+        <td><%= link_to 'Show', request %></td>
+        <td><%= link_to 'Edit', edit_request_path(request) %></td>
+        <td><%= link_to 'Delete', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

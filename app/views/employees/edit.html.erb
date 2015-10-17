@@ -1,0 +1,13 @@
+<%= link_to("<< back to List", {:action => 'index'}, :class =>'back-link') %>
+<div class="employee update">
+<h2> Update Employee </h2>
+<%= form_for  @employee, url: {action: "update", id: @employee.id}, html: {class: "employee_registration"} do |f| -%>
+<table> 
+  <th> <%= f.text_field :first_name,  placeholder: 'First Name' %> </th>>
+  <th> <%= f.text_field :last_name, placeholder: 'Last Name'%> </th>
+  <th> <%= f.text_field :contact_number, placeholder: 'Contact Number'%> </th>
+  <th> <%= f.text_field :email_id, placeholder: 'Email Id'%> </th>
+  <%= f.submit "Update Employee Details" %>
+  </table>
+<% end -%>
+</div>

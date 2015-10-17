@@ -1,0 +1,35 @@
+<div id="tfheader">
+    <form id="tfnewsearch" method="post" action="requests/search">
+            <input type="text" class="tftextinput" name="q" size="21" maxlength="120">
+            <input type="submit" value="Search" class="tfbutton">
+    </form>
+  <div class="tfclear"></div>
+  </div>
+<h1>Listing Servicemen</h1>
+<table border ="1">
+    <tr>
+      <th> Serviceman Id</th>
+      <th> First Name</th>
+      <th> Contact Number</th>
+      <th> Email Id </th>
+      <th> Location </th>
+      <th> Show_Link </th>
+      <th> Edit_Link </th>
+      <th> Delete_Link </th>
+    </tr>
+    <% @servicemen.each do |serviceman| %>
+     <tr>
+        <td><%= serviceman.id %> </td>
+        <td><%= serviceman.first_name + " " + serviceman.last_name  %> </td>
+        <td><%= serviceman.contact_number %> </td>
+        <td><%= serviceman.email_id %> </td>
+        <td><%= serviceman.location %> </td>
+        <td><%= link_to('Show', {:action =>'show',:id => serviceman.id}, :class => 'action show')%> </td>
+        <td><%= link_to('Edit', {:action =>'edit', :id => serviceman.id}, :class => 'action edit') %> </td>
+        <td><%= link_to('Destroy',{:action =>'destroy', :id => serviceman.id}, method: :delete, data: { confirm: 'Are you sure?'} )%> </td>
+      </tr>
+    <% end %>
+</table>
+
+<br>
+<%= link_to 'New Serviceman', new_serviceman_path %>

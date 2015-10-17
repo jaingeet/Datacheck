@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+<div class="request show">
+<h2> Show Request </h2>
+<table id="request_show", class= "request_heading_show">
+<tr>
+<th class= "request_heading_show"> Request Id </th>
+<td class= "request_heading_show"> <%= @request.id %> </td>
+</tr>
+<tr>
+<th class= "request_heading_show"> Customer Name </th>
+<td class= "request_heading_show"> <%= @request.customer_name %> </td>
+</tr>
+<tr>
+<th class= "request_heading_show"> Contact Number </th>
+<td class= "request_heading_show"> <%= @request.contact_number %> </td>
+</tr>
+<tr>
+<th class= "request_heading_show"> Request Type </th>
+<td class= "request_heading_show"> <%= @request.service_category %> </td>
+<tr>
+<th class= "request_heading_show" > Request Description</th>
+<td class= "request_heading_show"> <%= @request.service_description %> </td>
+</tr>
+<tr>
+<th class= "request_heading_show"> Address </th>
+<td class= "request_heading_show"> <%= @request.address %> </td>
+</tr>
+<tr>
+<th class= "request_heading_show"> Time Allocated </th>
+<td class= "request_heading_show"> <%= @request.time_allocated %> </td>
+</tr>
+<tr>
+<th class= "request_heading_show"> Flag </th>
+<td class= "request_heading_show"> <%= @request.flag %> </td>
+</tr>
+<tr>
+<th class= "request_heading_show"> Assigned To </th>
+<td class= "request_heading_show"> <%= @request.assigned_to %> </td>
+</tr>
+<tr>
+<th class= "request_heading_show"> Assigned By </th>
+<td class= "request_heading_show"> <%= @request.assigned_by %> </td>
+</tr>
+<tr>
+<th class= "request_heading_show"> Created At </th>
+<td class= "request_heading_show"> <%= @request.created_at %> </td>
+</tr>
+
+</table>
+<%= link_to 'Edit', edit_request_path(@request) %>
+<%= link_to 'Delete', {:action => 'destroy', :id => @request.id}, method: :delete,data: { confirm: 'Are you sure?' } %>
